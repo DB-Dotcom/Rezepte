@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: #333;
+  box-sizing: border-box;
+}
+
+/* :root {
+  --primary-color: #ff0000;
+  --secondary-color: #00ff00;
+}
+ */
+body {
+  background: #23313b;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+/* * ++++++++ Header nav start +++++++++++++++++++++++++++ */
+
+header {
+  min-height: 100px;
+  background: linear-gradient(-45deg,#051d33, hsl(234, 20%, 31%));
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+header .switcher {
+  position: absolute;
+  visibility: hidden;
+  left: -9999px;
+}
+
+header label {
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+}
+
+header ul {
+  list-style-type: none;
+  display: flex;
+}
+
+header a {
+  display: block;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0 15px;
+  transition: 0.4s;
+  color: #fff;
+}
+
+header a:hover {
+
+  color: hwb(0 93% 5%);
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  margin-top: 3px;
+}
+
+@media screen and (max-width: 800px) {
+  .open,
+  .close {
+    display: block;
+  }
+
+  .close {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    color: #fff;
+    font-size: 24px;
+  }
+
+  .switcher:checked ~ nav {
+    right: 0;
+  }
+
+  nav {
+    position: fixed;
+    width: 50%;
+    height: 100vh;
+    background: linear-gradient(180deg, #051d33, hsl(234, 20%, 31%));
+    right: -100%;
+    top: 0;
+    text-align: center;
+    padding: 100px 0;
+    transition: 0.7s;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav a {
+    padding: 20px;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
+/* ? ------------------- Header nav end ---------------- */
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: hsl(194, 36%, 19%);
+  border-radius: 20px;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5% ;
+  margin-top: 3%;
+  padding-top: 100px;
+}
+
+/* * ------------------------ card css start --------------------- */
+.card {
+  width: 300px;
+  height: 300px;
+  margin: 2%;
+  margin-top: 4%;
+  background-image: linear-gradient(163deg, hsl(0, 57%, 61%) 0%, hsl(115, 52%, 54%) 100%);
+  border-radius: 20px;
+  transition: all .3s;
+ }
+ 
+ .card2 {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 300px;
+  background-color: #1a1a1a;
+  transition: all .2s;
+ }
+ 
+/* content css ---------------------------------- */
+
+.card2 img {
+ 
+  flex: 8;
+  max-width: 100%;
+  height: auto;
+}
+h3 {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: antiquewhite;
+}
+
+
+/* * -------------- hover start -------------------------- */
+ .card2:hover {
+  transform: scale(0.98);
+  border-radius: 20px;
+ }
+ 
+ .card:hover {
+  box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
+  
+ }
+
+.card2 img:hover {
+  border-radius: 20px 20px 0 0 ;
+}
+/* ? -------------- hover end -------------------------- */
+
+
+
+
+
+/* ? -------------------------- card css end -------------------- */
+
